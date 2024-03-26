@@ -18,7 +18,7 @@
 ![Teams Download](./images/teams_tab_ms_teams.png)
 * Click on general under the batch name and in the right section goto files tab.
 ![Teams Download](./images/file_tab_ms_teams.png)
-* There you can find the recording and also join the meet.
+* There you can find the recordings and also join the team meetings.
 
 ## Video to demonstrate to join to Teams Meeting
 [![Teams SignUp Video](./images/youtube.png)](https://www.youtube.com/watch?v=tl0o5ehd2-g)
