@@ -1,4 +1,4 @@
-![MS Teams Tinitiate Image](../ms-teams/images/ms_teams_tinitiate.png)
+![MS Teams Tinitiate Image](./images/ms_teams_tinitiate.png)
 # Joining Microsoft Teams
 &copy; TINITIATE.COM
 
@@ -14,8 +14,11 @@
 ![Teams Download](./images/onceinstalled.png)
 * SignUp / Login with the **SAME EMAIL ID** you have provided, **DO NOT USE OTHER EMAIL ID**
 * Open the Teams App
-* Click on the Meeting Link from your email ID
-* You will be added once the meeting starts.
+* Goto teams tab and click on the batch name
+![Teams Download](./images/teams_tab_ms_teams.png)
+* Click on general under the batch name and in the right section goto files tab.
+![Teams Download](./images/file_tab_ms_teams.png)
+* There you can find the recording and also join the meet.
 
 ## Video to demonstrate to join to Teams Meeting
 [![Teams SignUp Video](./images/youtube.png)](https://www.youtube.com/watch?v=tl0o5ehd2-g)
