@@ -29,4 +29,3 @@ Click **Join a meeting**.
 
 ## Video to demonstrate to join to Teams Meeting
 [![Teams Meeting Video](./images/youtube.png)](https://www.youtube.com/watch?v=tfqcIjc3g94)
-https://www.youtube.com/watch?v=tl0o5ehd2-g
