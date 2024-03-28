@@ -7,7 +7,7 @@ if (-not (Get-Command choco -ErrorAction SilentlyContinue)) {
 }
 
 # Specify the version of Power BI Desktop to install
-$version = "2.127.1080.0"
+$version = "2.123.742.0"
 
 # Check if Power BI is installed by looking for the executable
 $powerBiPath = Get-Command "PBIDesktop.exe" -ErrorAction SilentlyContinue
