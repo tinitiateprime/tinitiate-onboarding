@@ -6,11 +6,10 @@ if (-not (Get-Command choco -ErrorAction SilentlyContinue)) {
     iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 }
 
-# Check if Power BI is installed by querying the registry
-$registryPath = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*"
-$powerBiInstalled = Get-ItemProperty -Path $registryPath | Where-Object { $_.DisplayName -like "*Power BI Desktop*" }
+# Check if Power BI is installed by looking for the executable
+$powerBiPath = Get-Command "PBIDesktop.exe" -ErrorAction SilentlyContinue
 
-if ($powerBiInstalled -eq $null) {
+if ($powerBiPath -eq $null) {
     # If Power BI is not installed, install it using Chocolatey
     Write-Host "Power BI is not installed. Installing Power BI..."
     choco install powerbi -y
