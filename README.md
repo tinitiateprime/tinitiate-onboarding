@@ -1,7 +1,5 @@
 ![Tinitiate Onboarding Image](tinitiate_onboarding.png)
-<div style="text-align: center;">
-&copy; TINITIATE.COM
-</div>
+<p align="center">&copy; TINITIATE.COM</p>
 
 
 # Tinitiate Training Onboarding
