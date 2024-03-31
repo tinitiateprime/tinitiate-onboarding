@@ -1,5 +1,7 @@
 ![Tinitiate Windows Python Installers Image](tinitiate_windows_python.png)
-<center>&copy; TINITIATE.COM</center>
+<div style="text-align: center;">
+&copy; TINITIATE.COM
+</div>
 
 # Python Installers
 ### Step 1: Install

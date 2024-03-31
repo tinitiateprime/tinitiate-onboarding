@@ -1,5 +1,7 @@
 ![Tinitiate Software Installers Image](tinitiate_software_installers.png)
-<center>&copy; TINITIATE.COM</center>
+<div style="text-align: center;">
+&copy; TINITIATE.COM
+</div>
 
 # Tinitiate Training Software Installers
 * Package managers, provided by TINITIATE, contribute to a more efficient and standardized software management process, promoting consistency and reliability across Windows, Mac, and Unix-based systems.

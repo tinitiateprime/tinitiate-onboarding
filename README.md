@@ -1,5 +1,8 @@
 ![Tinitiate Onboarding Image](tinitiate_onboarding.png)
-<center>&copy; TINITIATE.COM</center>
+<div style="text-align: center;">
+&copy; TINITIATE.COM
+</div>
+
 
 # Tinitiate Training Onboarding
 * Welcome to TINITIATE, Professional Training & IT Services.

@@ -1,5 +1,7 @@
 ![Tinitiate Windows Java Installers Image](tinitiate_windows_java.png)
-<center>&copy; TINITIATE.COM</center>
+<div style="text-align: center;">
+&copy; TINITIATE.COM
+</div>
 
 # Java Installers
 ### Step 1: Install
