@@ -1,10 +1,8 @@
-# Tinitiate Onboarding
-> Venkata Bhattaram
-* Welcome to TINITIATE, professional training and IT Services.
-* Here you can get information and access to software installers, database installers and user guides of various tools we use at TINITIATE
+![Tinitiate Onboarding Image](tinitiate_onboarding.png)
+<center>&copy; TINITIATE.COM</center>
 
-## Software Installers
-
-## Database Installers
-
-## User Guides
+# Tinitiate Training Onboarding
+* Welcome to TINITIATE, Professional Training & IT Services.
+* Here you can find information and get access to software installers and database installers with user guides for the various tools we utilize at TINITIATE.
+    * ### [Software Installers](./software-installers/)
+    * ### [Database Installers](./database-installers/)
