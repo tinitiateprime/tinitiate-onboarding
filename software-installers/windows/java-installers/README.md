@@ -1,0 +1,15 @@
+![Tinitiate Windows Java Installers Image](tinitiate_windows_java.png)
+<center>&copy; TINITIATE.COM</center>
+
+# Java Installers
+### Step 1: Install
+* Click on the Windows Start button.
+* Type "Windows Powershell" in the search bar.
+* Look for the Windows Powershell in the search results.
+* Right click on it and select run as administrator.
+* Copy the following command and run it.
+```ps1
+iex (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/tinitiateprime/tinitiate-onboarding/main/software-installers/windows/java-installers/java_installers.ps1" -UseBasicParsing).Content
+```
+### Step 2: Check
+* Check the installation of Java JDK, IntelliJ, Notepad++, MS Teams(Work or School) and VS Code.
