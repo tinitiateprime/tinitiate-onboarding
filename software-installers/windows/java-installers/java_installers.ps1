@@ -14,3 +14,11 @@ if (-not (Get-Command java -ErrorAction SilentlyContinue)) {
 if (-not (Get-Command idea64 -ErrorAction SilentlyContinue)) {
     choco install -y intellijidea-community
 }
+
+# Check if Visual Studio Code is installed and install it if necessary
+if (-not (Get-Command code -ErrorAction SilentlyContinue)) {
+    choco install -y vscode
+}
+
+# Install Java VS Code extensions
+code --install-extension vscjava.vscode-java-pack --force
