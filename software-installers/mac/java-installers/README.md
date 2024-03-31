@@ -1,7 +1,7 @@
 ![Tinitiate Mac Java Installers Image](tinitiate_mac_java.png)
 <p align="center">&copy; TINITIATE.COM</p>
 
-# Java Installer
+# Java Installers
 ### Step 1: Open Terminal
 * Open spotlight search field using keyboard shortcut `command+space`
 * Search for terminal and press enter
