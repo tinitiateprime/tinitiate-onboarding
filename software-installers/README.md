@@ -12,5 +12,5 @@
 * Tinitiate Training Service leverages the extensive package repositories provided by Chocolatey and Homebrew. These repositories host a wide range of pre-configured software packages, ensuring that users have access to a diverse set of tools, libraries, and applications for their development and system administration needs.
 
 ## Operating System
-* ### [Windows](./windows)
+* ### [Windows](./windows/README.md)
 * ### [Mac](./mac)
