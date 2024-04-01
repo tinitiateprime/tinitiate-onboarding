@@ -13,7 +13,7 @@ if (-Not (Test-Path "C:\Temp")) {
 Invoke-WebRequest -Uri $installerUrl -OutFile $installerPath
 
 # Execute the installer
-Start-Process -FilePath $installerPath -Args "/quiet" -Wait
+Start-Process -FilePath $installerPath -Wait
 
 # Cleanup the installer
 Remove-Item -Path $installerPath
