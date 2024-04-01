@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Download the script from the URL
-curl -o tinitiate_terminal.sh https://raw.githubusercontent.com/tinitiateprime/tinitiate-onboarding/main/software-installers/mac/terminal.sh
+curl -o tinitiate_terminal.sh https://raw.githubusercontent.com/tinitiateprime/tinitiate-onboarding/main/software-installers/mac/common_softs.sh
 
 # Make the script executable
-chmod +x tinitiate_terminal.sh
+chmod +x tinitiate_common_softs.sh
 
 # Execute the script
-./tinitiate_terminal.sh
+./tinitiate_common_softs.sh
 
 # Check if Homebrew is installed
 if ! command -v brew &> /dev/null
