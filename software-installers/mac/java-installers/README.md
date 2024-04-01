@@ -17,4 +17,8 @@ chmod +x tinitiate_java_installers.sh
 ./tinitiate_java_installers.sh
 ```
 ### Step 3: Check
-* Check for the installations of Java JDK, IntelliJ, VS Code and MS Teams.
+* Check for the installations of the following:
+    * Java JDK
+    * IntelliJ
+    * VS Code
+    * MS Teams

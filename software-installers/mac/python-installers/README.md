@@ -17,4 +17,7 @@ chmod +x tinitiate_python_installers.sh
 ./tinitiate_python_installers.sh
 ```
 ### Step 3: Check
-* Check for the installations of Python, VS Code and MS Teams.
+* Check for the installations of the following:
+    * Python
+    * VS Code
+    * MS Teams
