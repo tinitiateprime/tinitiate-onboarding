@@ -6,7 +6,7 @@
 * Right click on it and select run as administrator.
 * Copy the following command and run it.
 ```ps1
-iex (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/tinitiateprime/tinitiate-onboarding/main/powerbi/script.ps1" -UseBasicParsing).Content
+iex (Invoke-WebRequest -Uri "https://github.com/tinitiateprime/tinitiate-onboarding/blob/main/powerbi/script.ps1" -UseBasicParsing).Content
 ```
 ### Step 2: Check
 * Check the installation of the PowerBI.
