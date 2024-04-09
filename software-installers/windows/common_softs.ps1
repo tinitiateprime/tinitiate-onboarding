@@ -1,12 +1,12 @@
 # Function to check if a package is installed using Chocolatey
 function IsPackageInstalled($packageName) {
-    $chocoListOutput = choco list --local-only $packageName
+    $chocoListOutput = choco list --local-only --exact $packageName
     return $chocoListOutput -like "*$packageName*"
 }
 
 # Function to check if Visual Studio Code and an extension are installed
 function IsExtensionInstalled($extensionId) {
-    if (Get-Command code -ErrorAction SilentlyContinue) {
+    if (IsPackageInstalled 'vscode') {
         $extension = code --list-extensions | Where-Object { $_ -eq $extensionId }
         return [bool]($extension)
     } else {

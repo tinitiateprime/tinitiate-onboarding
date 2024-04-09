@@ -1,7 +1,7 @@
 # Step 1: Download and execute the script from the URL
 $scriptUrl = "https://github.com/tinitiateprime/tinitiate-onboarding/raw/main/software-installers/windows/powershell.ps1"
 Invoke-WebRequest -Uri $scriptUrl -OutFile "temp_script.ps1"
-& "temp_script.ps1"
+& "temp_script.ps1" -ExecutionPolicy Bypass
 Remove-Item "temp_script.ps1" -Force
 
 # Step 2: Open a new PowerShell instance as Administrator
@@ -14,8 +14,8 @@ $scriptBlock = {
         # Get the Python installation path from Chocolatey
         $pythonPath = (Get-Command python).Source.Replace('\python.exe', '')
 
-        # Add Python to the system Path environment variable
-        [Environment]::SetEnvironmentVariable("Path", $env:Path + ";$pythonPath", [EnvironmentVariableTarget]::Machine)
+        # Prepend Python to the system Path environment variable
+        [Environment]::SetEnvironmentVariable("Path", "$pythonPath;$env:Path", [EnvironmentVariableTarget]::Machine)
     } else {
         Write-Host "Python is already installed."
     }
