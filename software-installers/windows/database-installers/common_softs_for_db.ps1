@@ -15,7 +15,6 @@ if (-not (Get-Command choco -ErrorAction SilentlyContinue)) {
 if (-not (IsPackageInstalled 'docker-desktop')) {
     Write-Host "Installing Docker Desktop..."
     choco install docker-desktop -y
-    choco install docker-cli
     Write-Host "Docker Desktop installed successfully."
 } else {
     Write-Host "Docker Desktop is already installed. Skipping installation."
