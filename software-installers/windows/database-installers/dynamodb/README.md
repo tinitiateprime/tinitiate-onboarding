@@ -1,4 +1,4 @@
-![Tinitiate Windows DynamoDB Database Image](tinitiate_windows_dynamodb_database.png)
+![Tinitiate Windows DynamoDB Database Image](tinitiate_windows_dynamodb_database1.png)
 <p align="center">&copy; TINITIATE.COM</p>
 
 # DynamoDB Database Installers
