@@ -23,7 +23,7 @@ iex (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/tinitiateprime/ti
 ### Step 3: Database Folder Setup
 * Download the database setup file by clicking the following link.
 
-[ti-sqlserver-db-docker-compose.yml](https://raw.githubusercontent.com/tinitiateprime/tinitiate-onboarding/main/software-installers/windows/database-installers/mssqlserver/ti-sqlserver-db-docker-compose.yml "download")
+[ti-sqlserver-db-docker-compose.yml](https://github.com/tinitiateprime/tinitiate-onboarding/blob/main/software-installers/windows/database-installers/mssqlserver/ti-sqlserver-db-docker-compose.yml "download")
 * Create a folder with name 'tinitiate_databases' in your C drive and move the downloaded file to this folder.
 * Open the above folder and in the folder address bar type 'cmd' and enter.
 * Copy and run the following commands one after the another.
