@@ -1,12 +1,14 @@
-# Step 1: Download and execute the script from the URL
+# Step 1: Download the script from the URL
 $scriptUrl = "https://github.com/tinitiateprime/tinitiate-onboarding/raw/main/software-installers/windows/powershell.ps1"
 Invoke-WebRequest -Uri $scriptUrl -OutFile "temp_script.ps1"
-& "temp_script.ps1" -ExecutionPolicy Bypass
+
+# Step 2: Execute the script with Bypass execution policy
+& powershell -ExecutionPolicy Bypass -File "temp_script.ps1"
 Remove-Item "temp_script.ps1" -Force
 
-# Step 2: Open a new PowerShell instance as Administrator
+# Step 3: Open a new PowerShell instance as Administrator
 $scriptBlock = {
-    # Step 3: Check and install Python
+    # Step 4: Check and install Python
     if (-not (Get-Command python -ErrorAction SilentlyContinue)) {
         Write-Host "Python is not installed. Installing Python..."
         choco install python -y
@@ -20,7 +22,7 @@ $scriptBlock = {
         Write-Host "Python is already installed."
     }
 
-    # Step 4: Install VS Code extensions for Python
+    # Step 5: Install VS Code extensions for Python
     code --install-extension ms-python.python
     code --install-extension ms-python.python-extension-pack
 }
