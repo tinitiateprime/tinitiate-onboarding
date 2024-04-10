@@ -11,6 +11,8 @@
 ```ps1
 iex (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/tinitiateprime/tinitiate-onboarding/main/software-installers/windows/python-installers/python_installers.ps1" -UseBasicParsing).Content
 ```
+* Wait until everything gets installed.
+* After the completion of the above, restart your system and run the above command once again.
 ### Step 2: Check
 * Restart your system and Check the installation of the following:
     * Python
