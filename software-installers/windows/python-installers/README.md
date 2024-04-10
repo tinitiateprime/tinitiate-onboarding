@@ -12,7 +12,7 @@
 iex (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/tinitiateprime/tinitiate-onboarding/main/software-installers/windows/python-installers/python_installers.ps1" -UseBasicParsing).Content
 ```
 ### Step 2: Check
-* Check the installation of the following:
+* Restart your system and Check the installation of the following:
     * Python
     * Notepad++
     * MS Teams(Work or School)

@@ -1,12 +1,16 @@
-# Check if PowerShell Core is installed
+# Check and install Chocolatey if not already installed
+if (-not (Get-Command choco -ErrorAction SilentlyContinue)) {
+    Write-Host "Chocolatey is not installed. Installing Chocolatey..."
+    Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+    Write-Host "Chocolatey installed successfully."
+} else {
+    Write-Host "Chocolatey is already installed."
+}
+
+# Check and install PowerShell Core using Chocolatey if not already installed
 if (-not (Get-Command pwsh -ErrorAction SilentlyContinue)) {
-    Write-Host "PowerShell Core is not installed. Installing..."
-
-    # Download and install the latest version of PowerShell Core
-    $installerUrl = "https://aka.ms/install-powershell.ps1"
-    Invoke-WebRequest -Uri $installerUrl -OutFile "$env:TEMP\install-powershell.ps1"
-    & "$env:TEMP\install-powershell.ps1" -UseMSI
-
+    Write-Host "PowerShell Core is not installed. Installing via Chocolatey..."
+    choco install powershell-core -y
     Write-Host "PowerShell Core has been installed."
 } else {
     Write-Host "PowerShell Core is already installed."
