@@ -1,7 +1,7 @@
-![Tinitiate Windows Dynamo Database Image](tinitiate_windows_dynamo_database.png)
+![Tinitiate Windows DynamoDB Database Image](tinitiate_windows_dynamodb_database.png)
 <p align="center">&copy; TINITIATE.COM</p>
 
-# Dynamo Database Installers
+# DynamoDB Database Installers
 ### Step 1: Install
 * Click on the Windows Start button.
 * Type "Windows Powershell" in the search bar.
@@ -23,7 +23,7 @@ iex (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/tinitiateprime/ti
 ### Step 3: Database Folder Setup
 * Download the database setup file by clicking the following link.
 
-[ti-dynamo-db-docker-compose.yml](https://raw.githubusercontent.com/tinitiateprime/tinitiate-onboarding/main/software-installers/windows/database-installers/dynamo/ti-dynamo-db-docker-compose.yml "download")
+[ti-dynamo-db-docker-compose.yml](https://raw.githubusercontent.com/tinitiateprime/tinitiate-onboarding/main/software-installers/windows/database-installers/dynamodb/ti-dynamo-db-docker-compose.yml "download")
 * Create a folder with name 'tinitiate_databases' in your C drive and move the downloaded file to this folder.
 * Open the above folder and in the folder address bar type 'cmd' and enter.
 * Copy and run the following commands one after the another.
