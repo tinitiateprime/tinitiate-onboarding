@@ -25,7 +25,7 @@ iex (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/tinitiateprime/ti
 
 [ti-dynamo-db-docker-compose.yml](https://raw.githubusercontent.com/tinitiateprime/tinitiate-onboarding/main/software-installers/windows/database-installers/dynamodb/ti-dynamo-db-docker-compose.yml)
 
-<a href="https://raw.githubusercontent.com/tinitiateprime/tinitiate-onboarding/main/software-installers/windows/database-installers/dynamodb/ti-dynamo-db-docker-compose.yml" download>ti-dynamo-db-docker-compose.yml</a>
+<a href="https://raw.githubusercontent.com/tinitiateprime/tinitiate-onboarding/main/software-installers/windows/database-installers/dynamodb/ti-dynamo-db-docker-compose.yml" download="ti-dynamo-db-docker-compose.yml">ti-dynamo-db-docker-compose.yml</a>
 
 * Create a folder with name 'tinitiate_databases' in your C drive and move the downloaded file to this folder.
 * Open the above folder and in the folder address bar type 'cmd' and enter.
