@@ -6,4 +6,4 @@
 * Welcome to TINITIATE, Professional Training & IT Services.
 * Here you can find information and get access to software installers and database installers with user guides for the various tools we utilize at TINITIATE.
     * ### [Software Installers](./software-installers/README.md)
-    * ### [Database Installers](./database-installers/README.md)
+    * ### [MS Teams Login](./ms-teams/README.md)
