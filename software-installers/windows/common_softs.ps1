@@ -22,10 +22,10 @@ if (-not (Get-Command choco -ErrorAction SilentlyContinue)) {
     Write-Host "Chocolatey installed successfully."
 }
 
-# Install Microsoft Teams (work or school edition) if not already installed
-if (-not (IsPackageInstalled 'microsoft-teams')) {
+# Install Microsoft Teams (new bootstrapper) if not already installed
+if (-not (IsPackageInstalled 'microsoft-teams-new-bootstrapper')) {
     Write-Host "Installing Microsoft Teams..."
-    choco install microsoft-teams -y
+    choco install microsoft-teams-new-bootstrapper -y
     Write-Host "Microsoft Teams installed successfully."
 } else {
     Write-Host "Microsoft Teams is already installed. Skipping installation."
