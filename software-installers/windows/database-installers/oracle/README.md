@@ -18,7 +18,7 @@ iex (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/tinitiateprime/ti
 * Type "Docker Desktop" in the search bar.
 * Look for the Docker Desktop in the search results.
 * Right click on it and select run as administrator.
-* It starts the docker engine, if prompts anything, select 'continue as guest'.
+* It starts the docker engine, if prompts anything, select 'Accept', 'Next', 'continue without signing'.
 * You can minimize or close this docker window.
 ### Step 3: Database Folder Setup
 * Download the database setup file by clicking the following link.
