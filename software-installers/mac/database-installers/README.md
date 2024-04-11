@@ -1,7 +1,7 @@
 ![Tinitiate Database Installers Mac Image](tinitiate_database_installers_mac.png)
 <p align="center">&copy; TINITIATE.COM</p>
 
-* ### [Dynamo](./dynamo/README.md)
+* ### [DynamoDB](./dynamodb/README.md)
 * ### [MS SQL Server](./ms-sql-server/README.md)
 * ### [MySQL](./mysql/README.md)
 * ### [Oracle](./oracle/README.md)
