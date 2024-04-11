@@ -3,8 +3,8 @@
 
 # Python Installers
 ### Step 1: Open Terminal
-* Open spotlight search field using keyboard shortcut `command+space`
-* Search for terminal and press enter
+* Open spotlight search field using keyboard shortcut `command+space`.
+* Search for terminal and press enter.
 ### Step 2: Run The Following Commands
 * Run the following commands one after the other.
 ```sh
