@@ -1,4 +1,4 @@
-![Tinitiate Onboarding Image](tinitiate_onboarding.png)
+![Tinitiate Onboarding Image](images/tinitiate_onboarding.png)
 <p align="center">&copy; TINITIATE.COM</p>
 
 
@@ -9,11 +9,15 @@
 * Here you can find instructions and information to install the local software that you will need to setup your development environment
 
 ### [Software Installers](./software-installers/README.md)
+#### Windows
+![Tinitiate Onboarding Image](images/windows.png)
+#### Mac
+![Tinitiate Onboarding Image](images/mac.png)
 ## Database Developer Program
-    * Oracle DB
-    * MS SQL Server
-    * PostgreSQL
-    * MongoDB
+### Oracle DB
+### MS SQL Server
+### PostgreSQL
+### MongoDB
 ## React / Next JS Developer Program
 ## Data Engineer Development Program
 ## AWS Developer Program
