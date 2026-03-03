@@ -70,6 +70,24 @@ $extensions = @(
     'ms-vscode.live-server'
 )
 
+# Install Zoom if not already installed
+if (-not (IsPackageInstalled 'zoom')) {
+    Write-Host "Installing Zoom..."
+    choco install zoom -y
+    Write-Host "Zoom installed successfully."
+} else {
+    Write-Host "Zoom is already installed. Skipping installation."
+}
+
+# Install DBeaver if not already installed
+if (-not (IsPackageInstalled 'dbeavercommunity')) {
+    Write-Host "Installing DBeaver Community..."
+    choco install dbeavercommunity -y
+    Write-Host "DBeaver Community installed successfully."
+} else {
+    Write-Host "DBeaver Community is already installed. Skipping installation."
+}
+
 foreach ($extension in $extensions) {
     if (-not (IsExtensionInstalled $extension)) {
         Write-Host "Installing extension: $extension..."
