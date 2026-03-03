@@ -18,5 +18,10 @@ iex (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/tinitiateprime/ti
     * Java JDK
     * IntelliJ
     * Notepad++
-    * MS Teams(Work or School)
+    * Git
     * VS Code
+    * DBeaver Community
+    * MS Teams(Work or School)
+    * Zoom
+
+    
