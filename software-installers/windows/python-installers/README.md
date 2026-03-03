@@ -15,7 +15,11 @@ iex (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/tinitiateprime/ti
 * After the completion of the above, restart your system and run the above command once again.
 ### Step 2: Check
 * Restart your system and Check the installation of the following:
+    * Chocolatey (The software app store)
     * Python
     * Notepad++
-    * MS Teams(Work or School)
+    * Git    
     * VS Code
+    * DBeaver Community
+    * MS Teams(Work or School)
+    * Zoom
