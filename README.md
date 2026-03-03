@@ -4,6 +4,22 @@
 
 # Tinitiate Training Onboarding
 * Welcome to TINITIATE, Professional Training & IT Services.
-* Here you can find information and get access to software installers and database installers with user guides for the various tools we utilize at TINITIATE.
-    * ### [Software Installers](./software-installers/README.md)
-    * ### [MS Teams Login](./ms-teams/README.md)
+* Lets get started with software installations
+## Base software installation
+* Here you can find instructions and information to install the local software that you will need to setup your development environment
+
+### [Software Installers](./software-installers/README.md)
+## Database Developer Program
+    * Oracle DB
+    * MS SQL Server
+    * PostgreSQL
+    * MongoDB
+## React / Next JS Developer Program
+## Data Engineer Development Program
+## AWS Developer Program
+## Azure Developer Program
+## GCP Developer Program
+## Snowflake Developer Program
+## Java Developer Program
+## Optional Software Installations
+### [MS Teams Login](./ms-teams/README.md)
