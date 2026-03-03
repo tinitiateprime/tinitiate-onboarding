@@ -7,12 +7,9 @@
 * Lets get started with software installations
 ## Base software installation
 * Here you can find instructions and information to install the local software that you will need to setup your development environment
-
+* Follow the blow link for instructions to install on Windows or Mac
 ### [Software Installers](./software-installers/README.md)
-#### Windows
-![Tinitiate Onboarding Image|512x397,20%](images/windows.png)
-#### Mac
-![Tinitiate Onboarding Image|512x397,20%](images/mac.png)
+---
 ## Database Developer Program
 ### Oracle DB
 ### MS SQL Server
