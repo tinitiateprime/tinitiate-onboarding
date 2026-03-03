@@ -10,9 +10,9 @@
 
 ### [Software Installers](./software-installers/README.md)
 #### Windows
-![Tinitiate Onboarding Image](images/windows.png)
+![Tinitiate Onboarding Image|512x397,20%](images/windows.png)
 #### Mac
-![Tinitiate Onboarding Image](images/mac.png)
+![Tinitiate Onboarding Image|512x397,20%](images/mac.png)
 ## Database Developer Program
 ### Oracle DB
 ### MS SQL Server
