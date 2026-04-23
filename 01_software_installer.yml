@@ -1,0 +1,40 @@
+services:
+  code-server:
+    image: lscr.io/linuxserver/code-server:latest
+    container_name: ti-code-server
+    environment:
+      PUID: "1000"
+      PGID: "1000"
+      TZ: America/Chicago
+      PASSWORD: admin123
+      DEFAULT_WORKSPACE: /config/workspace
+    ports:
+      - "8444:8443"
+    volumes:
+      - code_server_config:/config
+      - ./workspace:/config/workspace
+
+  cloudbeaver:
+    image: dbeaver/cloudbeaver:latest
+    container_name: ti-cloudbeaver
+    ports:
+      - "8978:8978"
+    volumes:
+      - cloudbeaver_data:/opt/cloudbeaver/workspace
+
+  student-tools:
+    image: python:3.11-slim
+    container_name: ti-student-tools
+    working_dir: /workspace
+    volumes:
+      - ./workspace:/workspace
+    command: >
+      bash -lc "apt-get update &&
+      apt-get install -y --no-install-recommends git curl vim nano ca-certificates &&
+      python --version &&
+      git --version &&
+      tail -f /dev/null"
+
+volumes:
+  code_server_config:
+  cloudbeaver_data:
