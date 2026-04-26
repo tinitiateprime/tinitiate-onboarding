@@ -2,7 +2,7 @@
 <p align="center">&copy; TINITIATE.COM</p>
 
 # Python Installers
-> Use this installer command for Windows software installs and wherever Python is required.
+> Use this in for software installers. And also wherever Python is used.
 
 ### Step 1: Install
 * Click on the Windows Start button.
