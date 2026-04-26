@@ -2,6 +2,8 @@
 <p align="center">&copy; TINITIATE.COM</p>
 
 # Python Installers
+> Use this installer command for Windows software installs and wherever Python is required.
+
 ### Step 1: Install
 * Click on the Windows Start button.
 * Type "Windows Powershell" in the search bar.

@@ -31,4 +31,4 @@ $scriptBlock = {
 $encodedScriptBlock = [Convert]::ToBase64String([Text.Encoding]::Unicode.GetBytes($scriptBlock))
 
 # Start the new PowerShell instance as Administrator and execute the script block
-Start-Process -FilePath "pwsh" -ArgumentList "-NoProfile", "-ExecutionPolicy Bypass", "-EncodedCommand $encodedScriptBlock" -Verb RunAs
+Start-Process -FilePath "powershell" -ArgumentList "-NoProfile", "-ExecutionPolicy Bypass", "-EncodedCommand $encodedScriptBlock" -Verb RunAs
