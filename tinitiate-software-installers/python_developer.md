@@ -3,12 +3,12 @@
 Use this setup for Python basics and MySQL practice.
 
 ## YAML File
-[02_python_only.yml](./02_python_only.yml)
+[python_only.yml](./python_only.yml)
 
 ## Start Command
 
 ```powershell
-docker compose -f 02_python_only.yml up -d
+docker compose -f python_only.yml up -d
 ```
 
 ## Software Included
@@ -37,5 +37,5 @@ Tutorial repositories are downloaded into:
 ## To Stop the Setup
 
 ```powershell
-docker compose -f 02_python_only.yml down
+docker compose -f python_only.yml down
 ```

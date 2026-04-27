@@ -38,28 +38,28 @@ docker compose -f <yaml_filename> down
 
 Click on any topic below to view detailed installation and configuration instructions.
 
-### 1. 🐍 [Python Installers](./01_python_installers.md)
+### 1. 🐍 [Python Installers](./base_software_python.md)
 Install Python and essential Windows development tools directly on your system using PowerShell. Installs Chocolatey, Python, Notepad++, Git, VS Code, DBeaver Community, MS Teams, and Zoom.
 
-### 2. 💻 [Base Software Installation](./02_base_software.md)
+### 2. 💻 [Base Software Installation](./base_software.md)
 Browser-based developer tools setup. Includes VS Code and DBeaver CloudBeaver running in containers with Python and Git support.
 
-### 3. 🐍 [Python Developer Program](./03_python_developer.md)
+### 3. 🐍 [Python Developer Program](./python_developer.md)
 Complete Python development environment with Jupyter notebooks and MySQL database for learning Python basics and database interactions.
 
-### 4. 🗄️ [Database Developer Program](./04_database_developer.md)
+### 4. 🗄️ [Database Developer Program](./database_developer.md)
 SQL Server database development setup with DBeaver CloudBeaver for database management and SQL query development.
 
-### 5. ⚡ [PySpark S3 DB NoSQL Airflow](./05_pyspark_s3_airflow.md)
+### 5. ⚡ [PySpark S3 DB NoSQL Airflow](./pyspark_s3_airflow.md)
 Complete data engineering stack with PySpark, Apache Airflow, MinIO (S3), PostgreSQL, DynamoDB, and FTP server for batch data processing workflows.
 
-### 6. 🔄 [PySpark S3 DB NoSQL Airflow NiFi](./06_pyspark_nifi.md)
+### 6. 🔄 [PySpark S3 DB NoSQL Airflow NiFi](./pyspark_nifi.md)
 Extended data engineering setup including Apache NiFi for data routing and transformation alongside PySpark and Airflow.
 
-### 7. 📡 [PySpark S3 DB NoSQL Airflow Kafka](./07_pyspark_kafka.md)
+### 7. 📡 [PySpark S3 DB NoSQL Airflow Kafka](./pyspark_kafka.md)
 Real-time and batch data engineering setup combining PySpark, Airflow, and Apache Kafka for streaming data pipelines.
 
-### 8. 🌊 [PySpark S3 DB NoSQL Airflow NiFi Kafka](./08_pyspark_nifi_kafka.md)
+### 8. 🌊 [PySpark S3 DB NoSQL Airflow NiFi Kafka](./pyspark_nifi_kafka.md)
 Complete enterprise data platform with PySpark, Airflow, NiFi, and Kafka for both real-time streaming and batch processing workflows.
 
 ---
@@ -74,7 +74,7 @@ Complete enterprise data platform with PySpark, Airflow, NiFi, and Kafka for bot
 ### ▶️ Start Command
 
 ```powershell
-docker compose -f 06_pyspark_s3_db_nosql_airflow_kafka.yml up -d
+docker compose -f pyspark_s3_db_nosql_airflow_kafka.yml up -d
 ```
 
 ### ✅ Software Included
@@ -103,12 +103,12 @@ docker compose -f 06_pyspark_s3_db_nosql_airflow_kafka.yml up -d
 Use this setup for the full data engineering environment.
 
 ### 📄 YAML File
-[07_pyspark_s3_db_nosql_airflow_nifi_kafka.yml](./07_pyspark_s3_db_nosql_airflow_nifi_kafka.yml)
+[pyspark_s3_db_nosql_airflow_nifi_kafka.yml](./pyspark_s3_db_nosql_airflow_nifi_kafka.yml)
 
 ### ▶️ Start Command
 
 ```powershell
-docker compose -f 07_pyspark_s3_db_nosql_airflow_nifi_kafka.yml up -d
+docker compose -f pyspark_s3_db_nosql_airflow_nifi_kafka.yml up -d
 ```
 
 ### ✅ Software Included
@@ -143,5 +143,5 @@ docker compose -f 07_pyspark_s3_db_nosql_airflow_nifi_kafka.yml up -d
 Use the same YAML file name that was used to start the setup.
 
 ```powershell
-docker compose -f 07_pyspark_s3_db_nosql_airflow_nifi_kafka.yml down
+docker compose -f pyspark_s3_db_nosql_airflow_nifi_kafka.yml down
 ```

@@ -3,12 +3,12 @@
 Use this setup when the data engineering module includes both Apache NiFi and Kafka streaming.
 
 ## YAML File
-[07_pyspark_s3_db_nosql_airflow_nifi_kafka.yml](./07_pyspark_s3_db_nosql_airflow_nifi_kafka.yml)
+[pyspark_s3_db_nosql_airflow_nifi_kafka.yml](./pyspark_s3_db_nosql_airflow_nifi_kafka.yml)
 
 ## Start Command
 
 ```powershell
-docker compose -f 07_pyspark_s3_db_nosql_airflow_nifi_kafka.yml up -d
+docker compose -f pyspark_s3_db_nosql_airflow_nifi_kafka.yml up -d
 ```
 
 ## Software Included
@@ -56,5 +56,5 @@ admin123
 ## To Stop the Setup
 
 ```powershell
-docker compose -f 07_pyspark_s3_db_nosql_airflow_nifi_kafka.yml down
+docker compose -f pyspark_s3_db_nosql_airflow_nifi_kafka.yml down
 ```

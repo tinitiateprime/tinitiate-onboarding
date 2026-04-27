@@ -3,12 +3,12 @@
 Use this setup for SQL Server database development.
 
 ## YAML File
-[04_db_only.yml](./04_db_only.yml)
+[db_only.yml](./db_only.yml)
 
 ## Start Command
 
 ```powershell
-docker compose -f 04_db_only.yml up -d
+docker compose -f db_only.yml up -d
 ```
 
 ## Software Included
@@ -42,5 +42,5 @@ admin123
 ## To Stop the Setup
 
 ```powershell
-docker compose -f 04_db_only.yml down
+docker compose -f db_only.yml down
 ```
