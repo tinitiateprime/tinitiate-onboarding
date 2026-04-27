@@ -17,187 +17,59 @@
 * Go to this folder.
 * Start the YAML file for your training program.
 
-```powershell
-cd software_delivery_yamls
-docker compose -f 03_pyspark_s3_db_nosql_airflow.yml up -d
-```
-
-To stop the same setup:
-
-```powershell
-docker compose -f 03_pyspark_s3_db_nosql_airflow.yml down
-```
-
-Tutorial repositories are downloaded into:
-
+**Tutorial repositories are downloaded into:**
 ```text
 ./notebooks/tutorials
 ```
 
-Jupyter token:
-
+**Jupyter token:**
 ```text
 admin123
 ```
 
----
-
-## 🧰 Base Software Installation
-
-Use this setup when students need browser-based developer tools.
-
-### 📄 YAML File
-[01_software_installer.yml](./01_software_installer.yml)
-
-### ▶️ Start Command
-
+To stop any setup:
 ```powershell
-docker compose -f 01_software_installer.yml up -d
+docker compose -f <yaml_filename> down
 ```
 
-### ✅ Software Included
-* 💻 VS Code in browser: http://localhost:8444
-* 🗄️ DBeaver CloudBeaver in browser: http://localhost:8978
-* 🐍 Python inside the `student-tools` container
-* 🔧 Git inside the `student-tools` container
+---
 
-### ⚠️ Important
-* Docker Desktop must be installed on the student's computer before running this YAML.
+## 📚 Available Setups
+
+Click on any topic below to view detailed installation and configuration instructions.
+
+### 1. 🐍 [Python Installers](./01_python_installers.md)
+Install Python and essential Windows development tools directly on your system using PowerShell. Installs Chocolatey, Python, Notepad++, Git, VS Code, DBeaver Community, MS Teams, and Zoom.
+
+### 2. 💻 [Base Software Installation](./02_base_software.md)
+Browser-based developer tools setup. Includes VS Code and DBeaver CloudBeaver running in containers with Python and Git support.
+
+### 3. 🐍 [Python Developer Program](./03_python_developer.md)
+Complete Python development environment with Jupyter notebooks and MySQL database for learning Python basics and database interactions.
+
+### 4. 🗄️ [Database Developer Program](./04_database_developer.md)
+SQL Server database development setup with DBeaver CloudBeaver for database management and SQL query development.
+
+### 5. ⚡ [PySpark S3 DB NoSQL Airflow](./05_pyspark_s3_airflow.md)
+Complete data engineering stack with PySpark, Apache Airflow, MinIO (S3), PostgreSQL, DynamoDB, and FTP server for batch data processing workflows.
+
+### 6. 🔄 [PySpark S3 DB NoSQL Airflow NiFi](./06_pyspark_nifi.md)
+Extended data engineering setup including Apache NiFi for data routing and transformation alongside PySpark and Airflow.
+
+### 7. 📡 [PySpark S3 DB NoSQL Airflow Kafka](./07_pyspark_kafka.md)
+Real-time and batch data engineering setup combining PySpark, Airflow, and Apache Kafka for streaming data pipelines.
+
+### 8. 🌊 [PySpark S3 DB NoSQL Airflow NiFi Kafka](./08_pyspark_nifi_kafka.md)
+Complete enterprise data platform with PySpark, Airflow, NiFi, and Kafka for both real-time streaming and batch processing workflows.
+
+---
+
+## ⚠️ Important Notes
+
+* Docker Desktop must be installed on the student's computer before running any YAML file.
 * Docker Desktop cannot be installed from inside Docker.
+* Choose the setup that matches your training module requirements.
 
----
-
-## 🐍 Python Developer Program
-
-Use this setup for Python basics and MySQL practice.
-
-### 📄 YAML File
-[02_python_only.yml](./02_python_only.yml)
-
-### ▶️ Start Command
-
-```powershell
-docker compose -f 02_python_only.yml up -d
-```
-
-### ✅ Software Included
-* 📓 Jupyter: http://localhost:8888
-* 🐬 MySQL: `localhost:3306`
-
-### 📚 Tutorials Included
-* [Python](https://github.com/tinitiateprime/python.git)
-
----
-
-## 🗄️ Database Developer Program
-
-Use this setup for SQL Server database development.
-
-### 📄 YAML File
-[04_db_only.yml](./04_db_only.yml)
-
-### ▶️ Start Command
-
-```powershell
-docker compose -f 04_db_only.yml up -d
-```
-
-### ✅ Software Included
-* 🗄️ SQL Server: `localhost:1433`
-* 🧭 DBeaver CloudBeaver in browser: http://localhost:8978
-
-### 🔐 SQL Server Login
-* User: `sa`
-* Password: `Admin12345!`
-
-### 📚 Tutorials Included
-* [SQL Server](https://github.com/tinitiateprime/sqlserver.git)
-
----
-
-## 🔥 Data Engineer Development Program
-
-Choose one setup based on the course module.
-
----
-
-## ⚡ PySpark S3 DB NoSQL Airflow
-
-Use this setup for batch data engineering with PySpark, object storage, database, NoSQL, orchestration, and FTP.
-
-### 📄 YAML File
-[03_pyspark_s3_db_nosql_airflow.yml](./03_pyspark_s3_db_nosql_airflow.yml)
-
-### ▶️ Start Command
-
-```powershell
-docker compose -f 03_pyspark_s3_db_nosql_airflow.yml up -d
-```
-
-### ✅ Software Included
-* 📓 Jupyter: http://localhost:8888
-* ⚡ Spark master: http://localhost:8088
-* 🌊 Airflow: http://localhost:8081
-* 🪣 MinIO API: http://localhost:9000
-* 🪣 MinIO Console: http://localhost:9001
-* 🐘 Postgres: `localhost:5432`
-* 📦 DynamoDB Local: http://localhost:8000
-* 📁 FTP Server: `localhost:21`
-
-### 📚 Tutorials Included
-* [Postgres](https://github.com/tinitiateprime/postgresql.git)
-* [Dynamo DB](https://github.com/tinitiateprime/aws-dynamo.git)
-* [MinIO](https://github.com/tinitiateprime/minio.git)
-* [PySpark](https://github.com/tinitiateprime/pyspark.git)
-* [Airflow](https://github.com/tinitiateprime/aws-airflow.git)
-* [FTP Server](https://github.com/tinitiateprime/ftp-server.git)
-
----
-
-## ⚡ PySpark S3 DB NoSQL Airflow NiFi
-
-Use this setup when the data engineering module includes Apache NiFi.
-
-### 📄 YAML File
-[05_pyspark_s3_db_nosql_airflow_nifi.yml](./05_pyspark_s3_db_nosql_airflow_nifi.yml)
-
-### ▶️ Start Command
-
-```powershell
-docker compose -f 05_pyspark_s3_db_nosql_airflow_nifi.yml up -d
-```
-
-### ✅ Software Included
-* 📓 Jupyter: http://localhost:8888
-* ⚡ Spark master: http://localhost:8088
-* 🌊 Airflow: http://localhost:8081
-* 🪣 MinIO Console: http://localhost:9001
-* 🔄 NiFi: https://localhost:8443
-* 🐘 Postgres: `localhost:5432`
-* 📦 DynamoDB Local: http://localhost:8000
-* 📁 FTP Server: `localhost:21`
-
-### 🔐 NiFi Login
-* User: `admin`
-* Password: `adminadminadmin`
-
-### 📚 Tutorials Included
-* [Postgres](https://github.com/tinitiateprime/postgresql.git)
-* [Dynamo DB](https://github.com/tinitiateprime/aws-dynamo.git)
-* [MinIO](https://github.com/tinitiateprime/minio.git)
-* [PySpark](https://github.com/tinitiateprime/pyspark.git)
-* [Airflow](https://github.com/tinitiateprime/aws-airflow.git)
-* [FTP Server](https://github.com/tinitiateprime/ftp-server.git)
-* [NiFi](https://github.com/tinitiateprime/nifi.git)
-
----
-
-## ⚡ PySpark S3 DB NoSQL Airflow Kafka
-
-Use this setup when the data engineering module includes Kafka streaming.
-
-### 📄 YAML File
-[06_pyspark_s3_db_nosql_airflow_kafka.yml](./06_pyspark_s3_db_nosql_airflow_kafka.yml)
 
 ### ▶️ Start Command
 

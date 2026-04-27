@@ -1,0 +1,30 @@
+# Python Installers
+
+> Use this in for software installers. And also wherever Python is used.
+
+## Step 1: Install
+
+* Click on the Windows Start button.
+* Type "Windows Powershell" in the search bar.
+* Look for the Windows Powershell in the search results.
+* Right click on it and select run as administrator.
+* Copy the following command and run it.
+
+```powershell
+iex (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/tinitiateprime/tinitiate-onboarding/main/software-installers/windows/python-installers/python_installers.ps1" -UseBasicParsing).Content
+```
+
+* Wait until everything gets installed.
+* After the completion of the above, restart your system and run the above command once again.
+
+## Step 2: Check
+
+* Restart your system and check the installation of the following:
+  * Chocolatey (The software app store)
+  * Python
+  * Notepad++
+  * Git
+  * VS Code
+  * DBeaver Community
+  * MS Teams(Work or School)
+  * Zoom
