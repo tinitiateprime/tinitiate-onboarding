@@ -1,41 +1,27 @@
+version: '3.9'
 services:
-  sqlserver:
-    image: mcr.microsoft.com/mssql/server:2022-latest
-    container_name: ti-db-sqlserver
+  mssql:
+    image: 'mcr.microsoft.com/mssql/server:latest'
+    restart: always
+    container_name: tinitiate-mssql
+    ports:
+      - '1433:1433'
+    volumes:
+      - './mssql/mssql-data:/var/lib/mssql/data'
+      - './mssql/backup:/var/opt/mssql/backup'
     environment:
-      ACCEPT_EULA: "Y"
-      MSSQL_SA_PASSWORD: Admin12345!
-      MSSQL_PID: Developer
-    ports:
-      - "1433:1433"
-    volumes:
-      - sqlserver_data:/var/opt/mssql
+      ACCEPT_EULA: 'Y'
+      SA_PASSWORD: Tinitiate!23456
+      TZ: America/New_York
+      MSSQL_AGENT_ENABLED: true
+    networks:
+      - tinitiate
 
-  cloudbeaver:
-    image: dbeaver/cloudbeaver:latest
-    container_name: ti-db-cloudbeaver
-    depends_on:
-      - sqlserver
-      - tutorials
-    ports:
-      - "8978:8978"
-    volumes:
-      - cloudbeaver_data:/opt/cloudbeaver/workspace
-
-  tutorials:
-    image: alpine/git:latest
-    container_name: ti-db-tutorials
-    working_dir: /tutorials
-    volumes:
-      - ./notebooks/tutorials:/tutorials
-    command: >
-      sh -lc "for repo in
-      https://github.com/tinitiateprime/sqlserver.git;
-      do name=$$(basename $$repo .git);
-      if [ -d $$name/.git ]; then git -C $$name pull --ff-only;
-      else git clone $$repo; fi;
-      done"
+networks:
+  tinitiate:
+    name: tinitiate
+    external: true
 
 volumes:
-  sqlserver_data:
-  cloudbeaver_data:
+  mssql-data:
+    driver: local
