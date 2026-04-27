@@ -1,40 +1,23 @@
-services:
-  code-server:
-    image: lscr.io/linuxserver/code-server:latest
-    container_name: ti-code-server
-    environment:
-      PUID: "1000"
-      PGID: "1000"
-      TZ: America/Chicago
-      PASSWORD: admin123
-      DEFAULT_WORKSPACE: /config/workspace
-    ports:
-      - "8444:8443"
-    volumes:
-      - code_server_config:/config
-      - ./workspace:/config/workspace
-
-  cloudbeaver:
-    image: dbeaver/cloudbeaver:latest
-    container_name: ti-cloudbeaver
-    ports:
-      - "8978:8978"
-    volumes:
-      - cloudbeaver_data:/opt/cloudbeaver/workspace
-
-  student-tools:
-    image: python:3.11-slim
-    container_name: ti-student-tools
-    working_dir: /workspace
-    volumes:
-      - ./workspace:/workspace
-    command: >
-      bash -lc "apt-get update &&
-      apt-get install -y --no-install-recommends git curl vim nano ca-certificates &&
-      python --version &&
-      git --version &&
-      tail -f /dev/null"
-
-volumes:
-  code_server_config:
-  cloudbeaver_data:
+python_installers:
+  title: "Python Installers"
+  description: "Use this in for software installers. And also wherever Python is used."
+  step_1:
+    - "Click on the Windows Start button."
+    - "Type \"Windows Powershell\" in the search bar."
+    - "Look for the Windows Powershell in the search results."
+    - "Right click on it and select run as administrator."
+    - "Copy the following command and run it."
+  command: "iex (Invoke-WebRequest -Uri \"https://raw.githubusercontent.com/tinitiateprime/tinitiate-onboarding/main/software-installers/windows/python-installers/python_installers.ps1\" -UseBasicParsing).Content"
+  wait: "Wait until everything gets installed."
+  repeat: "After the completion of the above, restart your system and run the above command once again."
+  step_2:
+    check: "Restart your system and check the installation of the following:"
+    items:
+      - "Chocolatey (The software app store)"
+      - "Python"
+      - "Notepad++"
+      - "Git"
+      - "VS Code"
+      - "DBeaver Community"
+      - "MS Teams(Work or School)"
+      - "Zoom"
