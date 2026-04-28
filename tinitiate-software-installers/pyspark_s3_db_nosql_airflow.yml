@@ -1,24 +1,48 @@
+version: '3.9'
+
 services:
   postgres:
-    image: pgvector/pgvector:pg15
+    image: pgvector/pgvector:pg16
+    restart: always
     container_name: ti-batch-postgres
     environment:
-      POSTGRES_USER: admin
-      POSTGRES_PASSWORD: admin
-      POSTGRES_DB: metastore
+      POSTGRES_USER: tinitiate
+      POSTGRES_PASSWORD: Tinitiate!23456
+      POSTGRES_DB: tinitiate
+      POSTGRES_INITDB_ARGS: '--auth-host=scram-sha-256 --auth-local=scram-sha-256'
     ports:
       - "5432:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - ./postgresql/db-data:/var/lib/postgresql/data
+      - ./postgresql/scripts/init.sql:/docker-entrypoint-initdb.d/init.sql
+    command: >
+      postgres
+      -c shared_buffers=512MB
+      -c work_mem=64MB
+      -c max_connections=200
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tinitiate"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    logging:
+      options:
+        max-size: 10m
+        max-file: '3'
+    networks:
+      - tinitiate
 
   dynamodb:
     image: amazon/dynamodb-local:latest
     container_name: ti-batch-dynamodb
-    command: "-jar DynamoDBLocal.jar -sharedDb -dbPath /home/dynamodblocal/data"
+    command: '-jar DynamoDBLocal.jar -sharedDb -dbPath ./data'
     ports:
-      - "8000:8000"
+      - '8500:8000'
     volumes:
-      - dynamodb_data:/home/dynamodblocal/data
+      - './dynamodb:/home/dynamodblocal/data'
+    working_dir: /home/dynamodblocal
+    networks:
+      - tinitiate
 
   minio:
     image: minio/minio:latest
@@ -32,6 +56,8 @@ services:
       - "9001:9001"
     volumes:
       - minio_data:/data
+    networks:
+      - tinitiate
 
   spark-master:
     image: bde2020/spark-master:latest
@@ -41,6 +67,8 @@ services:
     ports:
       - "7077:7077"
       - "8088:8080"
+    networks:
+      - tinitiate
 
   spark-worker:
     image: bde2020/spark-worker:latest
@@ -53,6 +81,8 @@ services:
       SPARK_WORKER_MEMORY: 2g
     ports:
       - "8089:8081"
+    networks:
+      - tinitiate
 
   jupyter:
     image: jupyter/pyspark-notebook:latest
@@ -67,6 +97,8 @@ services:
       JUPYTER_TOKEN: admin123
     volumes:
       - ./notebooks:/home/jovyan/work
+    networks:
+      - tinitiate
 
   airflow-init:
     image: apache/airflow:2.8.1
@@ -75,9 +107,11 @@ services:
       - postgres
     environment:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
-      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://admin:admin@postgres/metastore
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://tinitiate:Tinitiate!23456@postgres/tinitiate
     entrypoint: /bin/bash
     command: -c "airflow db init && airflow users create --username admin --password admin --firstname admin --lastname user --role Admin --email admin@example.com || true"
+    networks:
+      - tinitiate
 
   airflow-webserver:
     image: apache/airflow:2.8.1
@@ -86,10 +120,12 @@ services:
       - airflow-init
     environment:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
-      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://admin:admin@postgres/metastore
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://tinitiate:Tinitiate!23456@postgres/tinitiate
     ports:
       - "8081:8080"
     command: webserver
+    networks:
+      - tinitiate
 
   airflow-scheduler:
     image: apache/airflow:2.8.1
@@ -98,8 +134,10 @@ services:
       - airflow-webserver
     environment:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
-      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://admin:admin@postgres/metastore
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://tinitiate:Tinitiate!23456@postgres/tinitiate
     command: scheduler
+    networks:
+      - tinitiate
 
   ftp-server:
     image: stilliard/pure-ftpd:hardened
@@ -114,6 +152,8 @@ services:
       - "30000-30009:30000-30009"
     volumes:
       - ftp_data:/home/ftpusers/student
+    networks:
+      - tinitiate
 
   tutorials:
     image: alpine/git:latest
@@ -133,9 +173,13 @@ services:
       if [ -d $$name/.git ]; then git -C $$name pull --ff-only;
       else git clone $$repo; fi;
       done"
+    networks:
+      - tinitiate
 
 volumes:
-  postgres_data:
-  dynamodb_data:
   minio_data:
   ftp_data:
+
+networks:
+  tinitiate:
+    external: true
