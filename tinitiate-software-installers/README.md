@@ -58,6 +58,13 @@ Click any topic below to open its guide.
 
 ---
 
+## 📖 Available Tutorial Courses
+
+- 🐍 [Python](https://github.com/tinitiateprime/python.git)
+  - Core Python programming tutorials and exercises.
+
+---
+
 ## ⚠️ Important Notes
 
 * Docker Desktop must be installed on the student's computer before running any YAML file.
