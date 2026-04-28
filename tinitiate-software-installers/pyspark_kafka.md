@@ -2,6 +2,27 @@
 
 Use this setup for learning Kafka streaming with Python.
 
+## 📋 Prerequisites
+
+Before starting, make sure Python is installed on your system.
+
+### Install Python
+
+If you don't have Python installed, follow the [Python & Base Software Installer](./base_software_python.md) guide first. 
+
+Or run this command in PowerShell (as Administrator):
+
+```powershell
+iex (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/tinitiateprime/tinitiate-onboarding/main/software-installers/windows/python-installers/python_installers.ps1" -UseBasicParsing).Content
+```
+
+Verify Python is installed:
+```powershell
+python --version
+```
+
+---
+
 ## YAML File
 [kafka_python.yml](./kafka_python.yml)
 
