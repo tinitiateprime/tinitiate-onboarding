@@ -42,3 +42,10 @@ After restarting your system, verify that the following software has been instal
 - The installation process may take several minutes
 - A system restart is required after the first installation
 - Run the command again after restart to complete setup
+
+## 📚 Course Material
+
+After installation, you can access the Python course material:
+
+- **[Python Tutorials](https://github.com/tinitiateprime/python.git)** - Learn Python basics, advanced concepts, and best practices with hands-on tutorials and exercises.
+
