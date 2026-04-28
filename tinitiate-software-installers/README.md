@@ -50,8 +50,8 @@ Click any topic below to open its guide.
 - 🔄 [PySpark S3 DB NoSQL Airflow NiFi](./pyspark_nifi.md)
   - Data routing and transformation using NiFi plus PySpark and Airflow.
 
-- 📡 [PySpark S3 DB NoSQL Airflow Kafka](./pyspark_kafka.md)
-  - Streaming and batch data pipelines with Kafka.
+- 📡 [Kafka Streaming with Python](./pyspark_kafka.md)
+  - Learn Kafka streaming with Python using Jupyter notebooks.
 
 - 🌊 [PySpark S3 DB NoSQL Airflow NiFi Kafka](./pyspark_nifi_kafka.md)
   - Full enterprise data engineering setup with NiFi and Kafka.
