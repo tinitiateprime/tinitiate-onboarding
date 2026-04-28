@@ -44,16 +44,22 @@ Click any topic below to open its guide.
 - 🗄️ [Database Developer Program](./database_developer.md)
   - SQL Server development with DBeaver CloudBeaver.
 
-- ⚡ [PySpark S3 DB NoSQL Airflow](./pyspark_s3_airflow.md)
+- 🗄️ [Database Only Setup](./db_only.md)
+  - SQL Server database for development and testing.
+
+- ⚡ [PySpark S3 DB NoSQL Airflow](./pyspark_s3_db_nosql_airflow.md)
   - Batch data engineering with PySpark, Airflow, MinIO, PostgreSQL, DynamoDB, and FTP.
 
-- 🔄 [PySpark S3 DB NoSQL Airflow NiFi](./pyspark_nifi.md)
+- 🔄 [PySpark S3 DB NoSQL Airflow NiFi](./pyspark_s3_db_nosql_airflow_nifi.md)
   - Data routing and transformation using NiFi plus PySpark and Airflow.
 
-- 📡 [Kafka Streaming with Python](./pyspark_kafka.md)
+- 📡 [Kafka Streaming with Python](./pyspark_s3_db_nosql_airflow_kafka.md)
   - Learn Kafka streaming with Python using Jupyter notebooks.
 
-- 🌊 [PySpark S3 DB NoSQL Airflow NiFi Kafka](./pyspark_nifi_kafka.md)
+- 📡 [Kafka with Python](./kafka_python.md)
+  - Lightweight Kafka setup with Python development environment.
+
+- 🌊 [PySpark S3 DB NoSQL Airflow NiFi Kafka](./pyspark_s3_db_nosql_airflow_nifi_kafka.md)
   - Full enterprise data engineering setup with NiFi and Kafka.
 
 ---
