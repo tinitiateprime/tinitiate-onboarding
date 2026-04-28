@@ -2,30 +2,6 @@
 
 Use this setup for batch data engineering with PySpark, object storage, databases (PostgreSQL & DynamoDB), NoSQL, orchestration, and FTP. All services including databases are included in a single Docker Compose file.
 
-## 📋 Prerequisites
-
-### Install Prerequisites
-* Click on the Windows Start button.
-* Type "Windows Powershell" in the search bar.
-* Look for the Windows Powershell in the search results.
-* Right click on it and select run as administrator.
-* Copy the following command and run it.
-```ps1
-iex (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/tinitiateprime/tinitiate-onboarding/main/software-installers/windows/database-installers/powershell_db.ps1" -UseBasicParsing).Content
-```
-* Wait until everything gets installed.
-* After the completion of the above, restart your system.
-
-### Docker Setup
-* Click on the Windows Start button.
-* Type "Docker Desktop" in the search bar.
-* Look for the Docker Desktop in the search results.
-* Right click on it and select run as administrator.
-* It starts the docker engine, if prompts anything, select 'Accept', 'Next', 'continue without signing'.
-* You can minimize or close this docker window.
-
----
-
 ## YAML File
 [pyspark_s3_db_nosql_airflow.yml](./pyspark_s3_db_nosql_airflow.yml)
 
