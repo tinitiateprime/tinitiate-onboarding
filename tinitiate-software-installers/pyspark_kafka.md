@@ -1,35 +1,24 @@
-# PySpark S3 DB NoSQL Airflow Kafka
+# Kafka Streaming with Python
 
-Use this setup when the data engineering module includes Kafka streaming.
+Use this setup for learning Kafka streaming with Python.
 
 ## YAML File
-[pyspark_s3_db_nosql_airflow_kafka.yml](./pyspark_s3_db_nosql_airflow_kafka.yml)
+[kafka_python.yml](./kafka_python.yml)
 
 ## Start Command
 
 ```powershell
-docker compose -f pyspark_s3_db_nosql_airflow_kafka.yml up -d
+docker compose -f kafka_python.yml up -d
 ```
 
 ## Software Included
 
-* 📓 **Jupyter**: http://localhost:8888
-* ⚡ **Spark master**: http://localhost:8088
-* 🌊 **Airflow**: http://localhost:8081
-* 🪣 **MinIO Console**: http://localhost:9001
 * 📡 **Kafka**: `localhost:9092`
-* 🐘 **Postgres**: `localhost:5432`
-* 📦 **DynamoDB Local**: http://localhost:8000
-* 📁 **FTP Server**: `localhost:21`
+* 📓 **Jupyter**: http://localhost:8888
 
-## Tutorials Included
+## Course Material Included
 
-* [Postgres](https://github.com/tinitiateprime/postgresql.git)
-* [Dynamo DB](https://github.com/tinitiateprime/aws-dynamo.git)
-* [MinIO](https://github.com/tinitiateprime/minio.git)
-* [PySpark](https://github.com/tinitiateprime/pyspark.git)
-* [Airflow](https://github.com/tinitiateprime/aws-airflow.git)
-* [FTP Server](https://github.com/tinitiateprime/ftp-server.git)
+* [Python](https://github.com/tinitiateprime/python.git)
 * [Kafka](https://github.com/tinitiateprime/kafka.git)
 
 ## Tutorial Location
@@ -49,5 +38,5 @@ admin123
 ## To Stop the Setup
 
 ```powershell
-docker compose -f pyspark_s3_db_nosql_airflow_kafka.yml down
+docker compose -f kafka_python.yml down
 ```
