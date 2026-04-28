@@ -38,11 +38,8 @@ docker compose -f <yaml_filename> down
 
 Click any topic below to open its guide.
 
-- 🐍 [Python Installers](./base_software_python.md)
+- 🐍 [Python & Base Software Installer](./base_software_python.md)
   - Install Python and essential Windows tools: Chocolatey, Python, Notepad++, Git, VS Code, DBeaver Community, MS Teams, and Zoom.
-
--  [Python Developer Program](./python_developer.md)
-  - Python development with Jupyter and MySQL.
 
 - 🗄️ [Database Developer Program](./database_developer.md)
   - SQL Server development with DBeaver CloudBeaver.

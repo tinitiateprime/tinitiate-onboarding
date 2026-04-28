@@ -1,6 +1,6 @@
-# 🐍 Python Installers
+# 🐍 Python & Base Software Installer
 
-> **Use this for software installers. And also wherever Python is used.**
+> **Use this to install Python and essential base software on your Windows system. Also use wherever Python is required.**
 
 ## 📥 Step 1: Install
 
