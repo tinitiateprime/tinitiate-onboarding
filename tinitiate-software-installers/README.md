@@ -41,10 +41,7 @@ Click any topic below to open its guide.
 - 🐍 [Python Installers](./base_software_python.md)
   - Install Python and essential Windows tools: Chocolatey, Python, Notepad++, Git, VS Code, DBeaver Community, MS Teams, and Zoom.
 
-- 💻 [Base Software Installation](./base_software.md)
-  - Browser-based developer tools with VS Code and DBeaver CloudBeaver in containers.
-
-- 🐍 [Python Developer Program](./python_developer.md)
+-  [Python Developer Program](./python_developer.md)
   - Python development with Jupyter and MySQL.
 
 - 🗄️ [Database Developer Program](./database_developer.md)
